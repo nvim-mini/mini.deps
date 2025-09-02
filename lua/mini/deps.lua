@@ -1489,7 +1489,12 @@ H.cli_run = function(jobs)
     -- Prepare data for `vim.loop.spawn`
     local executable, args = command[1], vim.list_slice(command, 2, #command)
     local process, stdout, stderr = nil, vim.loop.new_pipe(), vim.loop.new_pipe()
-    local spawn_opts = { args = args, cwd = cwd, stdio = { nil, stdout, stderr } }
+
+    -- - Unset special `GIT_xxx` variables that can affect `git` commands
+    local env = vim.fn.environ()
+    env.GIT_DIR, env.GIT_WORK_TREE = nil, nil
+
+    local spawn_opts = { args = args, cwd = cwd, env = env, clear_env = true, stdio = { nil, stdout, stderr } }
 
     local on_exit = function(code)
       -- Process only not already closing job
