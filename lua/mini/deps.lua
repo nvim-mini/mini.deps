@@ -1491,10 +1491,14 @@ H.cli_run = function(jobs)
     local process, stdout, stderr = nil, vim.loop.new_pipe(), vim.loop.new_pipe()
 
     -- - Unset special `GIT_xxx` variables that can affect `git` commands
-    local env = vim.fn.environ()
-    env.GIT_DIR, env.GIT_WORK_TREE = nil, nil
+    local env_map = vim.fn.environ()
+    env_map.GIT_DIR, env_map.GIT_WORK_TREE = nil, nil
+    local env = {}
+    for k, v in pairs(env_map) do
+      table.insert(env, k .. '=' .. tostring(v))
+    end
 
-    local spawn_opts = { args = args, cwd = cwd, env = env, clear_env = true, stdio = { nil, stdout, stderr } }
+    local spawn_opts = { args = args, cwd = cwd, env = env, stdio = { nil, stdout, stderr } }
 
     local on_exit = function(code)
       -- Process only not already closing job
