@@ -11,22 +11,24 @@ See more details in [Features](#features) and [Documentation](doc/mini-deps.txt)
 > [!NOTE]
 > This was previously hosted at a personal `echasnovski` GitHub account. It was transferred to a dedicated organization to improve long term project stability. See more details [here](https://github.com/nvim-mini/mini.nvim/discussions/1970).
 
-⦿ This is a part of [mini.nvim](https://github.com/nvim-mini/mini.nvim) library. Please use [this link](https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-deps.md) if you want to mention this module.
+⦿ This is a part of [mini.nvim](https://nvim-mini.org/mini.nvim) library. Please use [this link](https://nvim-mini.org/mini.nvim/readmes/mini-deps) if you want to mention this module.
 
 ⦿ All contributions (issues, pull requests, discussions, etc.) are done inside of 'mini.nvim'.
 
-⦿ See the repository page to learn about common design principles and configuration recipes.
+⦿ See [whole library documentation](https://nvim-mini.org/mini.nvim/doc/mini-nvim) to learn about general design principles, disable/configuration recipes, and more.
+
+⦿ See [MiniMax](https://nvim-mini.org/MiniMax) for a full config example that uses this module.
 
 ---
 
-If you want to help this project grow but don't know where to start, check out [contributing guides of 'mini.nvim'](https://github.com/nvim-mini/mini.nvim/blob/main/CONTRIBUTING.md) or leave a Github star for 'mini.nvim' project and/or any its standalone Git repositories.
+If you want to help this project grow but don't know where to start, check out [contributing guides of 'mini.nvim'](https://nvim-mini.org/mini.nvim/CONTRIBUTING) or leave a Github star for 'mini.nvim' project and/or any its standalone Git repositories.
 
 ## Demo
 
 <!-- Demo source: https://github.com/nvim-mini/assets/blob/main/demo/demo-deps.mp4 -->
 https://github.com/nvim-mini/mini.nvim/assets/24854248/e3b0659b-ce79-4464-8601-e0117f38569f
 
-**Note**: This demo features custom `vim.notify()` from [mini.notify](https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-notify.md).
+**Note**: This demo features custom `vim.notify()` from [mini.notify](https://nvim-mini.org/mini.nvim/readmes/mini-notify).
 
 ## Features
 
