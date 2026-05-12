@@ -2,6 +2,18 @@
 ---
 --- MIT License Copyright (c) 2024 Evgeni Chasnovski
 
+--- *MiniDeps-dev-freeze*
+--- As Neovim=0.12 introduced a built-in plugin manager |vim.pack| (which used this
+--- module as a design reference), development of |mini.deps| is frozen. It means:
+---
+--- - On Neovim>=0.12 it is recommended to use |vim.pack| for plugin management
+---   and |MiniMisc.safely()| as |MiniDeps.now()| and |MiniDeps.later()| alternative.
+---   See https://echasnovski.com/vim-pack-guide for more details, including
+---   recommendations about migration from |mini.deps|.
+---
+--- - This module will remain a part of |mini.nvim| at least until Neovim=0.11 is
+---   supported. It might receive critical fixes, but likely no new features.
+---
 --- Features:
 ---
 --- - Manage plugins utilizing Git and built-in |packages| with these actions:

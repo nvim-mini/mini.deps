@@ -30,6 +30,14 @@ https://github.com/nvim-mini/mini.nvim/assets/24854248/e3b0659b-ce79-4464-8601-e
 
 **Note**: This demo features custom `vim.notify()` from [mini.notify](https://nvim-mini.org/mini.nvim/readmes/mini-notify).
 
+## Development freeze
+
+As Neovim=0.12 introduced a built-in plugin manager [vim.pack](https://neovim.io/doc/user/helptag.html?tag=vim.pack) (which used this module as a design reference), development of 'mini.deps' is frozen. It means:
+
+- On Neovim>=0.12 it is recommended to use [vim.pack](https://neovim.io/doc/user/helptag.html?tag=vim.pack) for plugin management and `:h MiniMisc.safely()` as `MiniDeps.now()` and `MiniDeps.later()` alternative. See [https://echasnovski.com/vim-pack-guide](https://echasnovski.com/vim-pack-guide) for more details, including recommendations about migration from 'mini.deps'.
+
+- This module will remain a part of 'mini.nvim' at least until Neovim=0.11 is supported. It might receive critical fixes, but likely no new features.
+
 ## Features
 
 - Manage plugins utilizing Git and built-in packages with these actions:
